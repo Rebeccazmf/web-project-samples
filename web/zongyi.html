@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Keywords" content="综艺秀 | 旅游演出 | 儿童剧" />
+<meta name="Description" content=" 金海岸文化发展股份有限公司是一家以剧院连锁“金海岸演艺大舞台”为主业，以旅游演出《西湖之夜》、国内外巡演《中国印象》及相关文化创意项目为一体的民营股份制文化企业..." />
+<meta name="author" content="milan7" />
+<title>苏州金海岸都市剧院</title>
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" type="text/css" href="js/styles.css">
+<link href="css/goodteacher.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/banner.js"></script>
+<link type="text/css" href="css/juheweb.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/juheweb1.js"></script><script type="text/javascript" src="js/juheweb.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+	var oBtnLeft = document.getElementById("goleft");
+	var oBtnRight = document.getElementById("goright");
+	var oDiv = document.getElementById("indexmaindiv");
+	var oDiv1 = document.getElementById("maindiv1");
+	var oUl = oDiv.getElementsByTagName("ul")[0];
+	var aLi = oUl.getElementsByTagName("li");
+	var now = -5 * (aLi[0].offsetWidth + 13);
+	oUl.style.width = aLi.length * (aLi[0].offsetWidth + 13) + 'px';
+	oBtnRight.onclick = function () {
+		var n = Math.floor((aLi.length * (aLi[0].offsetWidth + 13) + oUl.offsetLeft) / aLi[0].offsetWidth);
+
+		if (n <= 5) {
+			move(oUl, 'left', 0);
+		}
+		else {
+			move(oUl, 'left', oUl.offsetLeft + now);
+		}
+	}
+	oBtnLeft.onclick = function () {
+		var now1 = -Math.floor((aLi.length / 5)) * 5 * (aLi[0].offsetWidth + 13);
+
+		if (oUl.offsetLeft >= 0) {
+			move(oUl, 'left', now1);
+		}
+		else {
+			move(oUl, 'left', oUl.offsetLeft - now);
+		}
+	}
+	var timer = setInterval(oBtnRight.onclick, 5000);
+	oDiv.onmouseover = function () {
+		clearInterval(timer);
+	}
+	oDiv.onmouseout = function () {
+		timer = setInterval(oBtnRight.onclick, 5000);
+	}
+
+};
+
+function getStyle(obj, name) {
+	if (obj.currentStyle) {
+		return obj.currentStyle[name];
+	}
+	else {
+		return getComputedStyle(obj, false)[name];
+	}
+}
+
+function move(obj, attr, iTarget) {
+	clearInterval(obj.timer)
+	obj.timer = setInterval(function () {
+		var cur = 0;
+		if (attr == 'opacity') {
+			cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+		}
+		else {
+			cur = parseInt(getStyle(obj, attr));
+		}
+		var speed = (iTarget - cur) / 6;
+		speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+		if (iTarget == cur) {
+			clearInterval(obj.timer);
+		}
+		else if (attr == 'opacity') {
+			obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+			obj.style.opacity = (cur + speed) / 100;
+		}
+		else {
+			obj.style[attr] = cur + speed + 'px';
+		}
+	}, 30);
+}  
+</script>
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+</head>
+<body>
+<!--top-->
+<div class="top">
+  <div class="top1">
+    <p>欢迎访问苏州金海岸都市剧院网站！</p>
+    <span>加入收藏&nbsp;|&nbsp;设为首页&nbsp;|&nbsp;在线订单</span> </div>
+  <div class="top2"> <img src="images/top.jpg"> </div>
+</div>
+<!--导航-->
+<div class="header">
+  <div class="nav">
+    <ul>
+      <li><span class="nav_ch"><a href="index.html">网站首页</a></span><span><a href="" class="nav_en">HOME</a></span></li>
+      <li><span class="nav_ch"><a href="zongyi.html">综艺秀</a></span><span><a href="" class="nav_en">VAUDEVILLE</a></span></li>
+      <li><span class="nav_ch"><a href="per.html">旅游演出</a></span><span><a href="" charset=""class="nav_en">PERFORMANCE</a></span></li>
+      <li><span class="nav_ch"><a href="child.html">更多演出</a></span><span><a href="" class="nav_en">TOURISM</a></span></li>
+      <li><span class="nav_ch"><a href="business.html">商务合作</a></span><span><a href="" class="nav_en">BUSINESS</a></span></li>
+      <li><span class="nav_ch"><a href="culture.html">企业文化</a></span><span><a href="" class="nav_en">CULTURE</a></span></li>
+      <li><span class="nav_ch"><a href="more.html">更多</a></span><span><a href="" class="nav_en">MORE</a></span></li>
+      <li><span class="nav_ch"><a href="contact.html">联系我们</a></span><span><a href="" class="nav_en">CONTACT</a></span></li>
+    </ul>
+  </div>
+</div>
+<div class="clear clearfix"></div>
+<!--导航end--> 
+<!--banner-->
+<div class="banner">
+  <div class="b-img"> <a href="#" style="background:url(images/banner1.jpg)center no-repeat;"></a> <a href="#" style="background:url(images/banner1.jpg)center no-repeat;"></a> <a href="#" style="background:url(images/banner1.jpg)center no-repeat;"></a> <a href="#" style="background:url(images/banner1.jpg)center no-repeat;"></a> </div>
+  <div class="b-list"></div>
+  <!-- <a class="bar-left" href="#"><em></em></a><a class="bar-right" href="#"><em></em></a>--> </div>
+<div class="clear clearfix"></div>
+<!--banner end--> 
+<!--综艺秀--> 
+<script src="/demos/googlegg.js"></script>
+<div class="tabox">
+  <div class="hd">
+    <ul>
+      <li class=" ">节目录制</li>
+      <li class=" ">音乐制作</li>
+      <li class=" ">广告招租</li>
+      <li class=" ">企业租场</li>
+      <li class=" ">演员外演</li>
+      <li class="on">明星代言</li>
+    </ul>
+  </div>
+  <div class="bd">
+    <ul class="lh" style="display: none;">
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥399.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥1299.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥3999.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥1.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</div>
+        <div class="p-price">票价： <strong>￥809.00</strong></div>
+      </li>
+    </ul>
+    <ul class="lh" style="display: none;">
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥399.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/1.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥235.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.4.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥899.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+    </ul>
+    <ul class="lh" style="display: none;">
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/3.1.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥187.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/3.2.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥2399.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/3.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥449.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/3.4.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥449.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/3.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥3599.00</strong></div>
+      </li>
+    </ul>
+    <ul class="lh" style="display: none;">
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.3.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥438.00</strong></div>
+      </li>
+    </ul>
+    <ul class="lh" style="display: block;">
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+      <li>
+        <div class="p-img ld"> <a href=""> <img src="images/2.5.jpg"></a> </div>
+        <div class="p-name"> <a href="">剧种展示</a></div>
+        <div class="p-price">票价： <strong>￥112.00</strong></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+	jQuery(".tabox").slide({delayTime: 0});
+</script>
+<div class="clear"></div>
+<!--综艺秀-end--> 
+/<!--友情链接-->
+<div class="con4">
+  <div class="con4top"><a href="" target="_blank"><img src="images/con4.png"></a></div>
+  <div class="boxbox">
+    <div class="picbox">
+      <ul class="piclist mainlist">
+        <li><a href="" target="_blank"><img src="images/1.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/2.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/3.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/4.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/5.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/5.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/5.jpg" /></a></li>
+        <li><a href="" target="_blank"><img src="images/5.jpg" /></a></li>
+      </ul>
+      <ul class="piclist swaplist">
+      </ul>
+    </div>
+    <div class="og_prev"></div>
+    <div class="og_next"></div>
+  </div>
+</div>
+<!--友情链接end--> 
+<!--底部-->
+<div class="footer">
+  <div class="footall">
+    <div class="footer_left">
+      <p>杭州金海岸文化发展股份有限公司苏州分公司&nbsp;&nbsp;金海岸演艺大舞台&nbsp;&nbsp;苏州旗舰店 </p>
+      <p>演出地址: 苏州金门路33号(石路演艺中心) &nbsp;&nbsp;
+        演出时间：365天 每晚21:00-11:20 </p>
+      <p>乘车路线： 爱河桥公交站下往东步行50米</p>
+      <p>订票热线： 0512-65775066-65775766&nbsp;&nbsp;
+        传真： 0512-65775971</p>
+      <div class="clear"> </div>
+    </div>
+    <div class="footer_right"> <img src="images/code.png"> </div>
+  </div>
+</div>
+<!--底部end-->
+</body>
+</html>
